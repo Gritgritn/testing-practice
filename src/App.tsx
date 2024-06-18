@@ -29,6 +29,8 @@ export const App = () => {
         </button>
       </div>
 
+      <div data-testid="outside-modal">Outside</div>
+
       <Modal handleClose={() => setIsOpen(false)} isOpen={isOpen}>
         <Login handleAuthorization={authorize} />
       </Modal>
