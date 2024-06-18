@@ -20,10 +20,11 @@ export const useAuthorization = (props: Props) => {
           handleSuccess?.(data);
           setIsAuthorized(true);
           resolve();
+          return
+        } else {
+          handleError?.();
+          reject();
         }
-
-        handleError?.();
-        reject();
       }, 3000);
     });
   };
