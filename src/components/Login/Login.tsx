@@ -55,7 +55,7 @@ export const Login = (props: Props) => {
         onChange={(e) => setPassword(e.target.value)}
       />
       <div>
-        <button type="button" onClick={handleSubmit} disabled={isLoading}>
+        <button data-testid="login-button" type="button" onClick={handleSubmit} disabled={isLoading}>
           {isLoading ? "Загрузка" : "Войти"}
         </button>
       </div>
